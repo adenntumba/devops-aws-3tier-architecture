@@ -18,12 +18,18 @@ variable "sub-public" {
 
 variable "sub-private" {
   type        = list(string)
-  default     = ["172.16.20.0/24", "172.16.21.0/24", "172.16.22.0/24", "172.16.23.0/24"]
+  default     = ["172.16.20.0/24", "172.16.21.0/24"]
+  description = "value"
+}
+
+variable "sub-database" {
+  type        = list(string)
+  default     = ["172.16.22.0/24", "172.16.23.0/24"]
   description = "value"
 }
 
 variable "availability_zone" {
   type        = list(string)
-  default     = ["us-east-1a", "us-east-1b", "us-east-1c", "us-east-1d"]
+  default     = ["us-east-1a", "us-east-1b"]
   description = "value"
 }
